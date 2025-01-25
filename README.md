@@ -13,7 +13,7 @@ Clone the Repository:
 bash
 Copy
 Edit
-git clone https://github.com/aryan740/birthday-invitation-webpage.git  
+git clone https://github.com/aryan740/portfolio.git  
 Open the File:
 
 Navigate to the folder where the repository is cloned.
