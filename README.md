@@ -1,7 +1,7 @@
 # Aryan — Frontend Developer (Intern) — Portfolio
 
-**Live demo:** _add your live URL here (GitHub Pages / Netlify / Vercel)_  
-**Contact:** aryangoyat2004@gmail.com • +91 74045 27004
+**Live demo:** https://aryan740.github.io/Portfolio/ 
+**Contact:** aryangoyat2004@gmail.com 
 
 ---
 
@@ -21,8 +21,8 @@ The style is intentionally futuristic — neon accents on a dark palette — to 
 - **Markup:** HTML5  
 - **Styling:** CSS (modern layout, gradients, glass panels)  
 - **Scripting:** Vanilla JavaScript (ES6+)  
-- **Deployment:** GitHub Pages / Netlify / Vercel (static site)  
-- Fonts: Google Fonts — *Inter*
+- **Deployment:** GitHub Pages 
+
 
 ---
 
@@ -31,7 +31,7 @@ The style is intentionally futuristic — neon accents on a dark palette — to 
 - Skills grouped into logical categories
 - Projects section with filters (React / Frontend / Games)
 - Education & Certificates section
-- Contact form with client-side validation (replace with Netlify Forms or backend)
+- Contact form with client-side validation (
 - Responsive layout (mobile-first considerations)
 - Theme toggle and smooth-scrolling navigation
 - Lightweight (~no external JS frameworks) for fast loading
