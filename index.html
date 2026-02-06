@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aryan — Aspiring MERN Stack Developer</title>
+  <meta name="description" content="Aryan — Frontend Developer transitioning to MERN Stack. HTML • CSS • JavaScript • React. Building futuristic web applications." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanline"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home"><span class="brand-neo">ARYAN</span><small> — MERN Learner</small></a>
+
+      <nav id="nav" class="nav" aria-label="Primary">
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#education" data-i18n="nav_edu">Education</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="btn btn-ghost" aria-label="Toggle language">DE</button>
+        
+        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1><span data-i18n="hero_hi">Hi, I'm</span> <span class="accent">Aryan</span></h1>
+          <p class="lead" data-i18n="hero_desc">
+            Motivated Frontend Developer transitioning to Full Stack. 
+            Strong foundation in HTML, CSS and JavaScript — currently expanding into the <strong>MERN Stack</strong> (MongoDB, Express, React, Node) to build scalable, production-ready applications.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="#projects" data-i18n="btn_projects">See Projects</a>
+            <a class="btn btn-outline" href="mailto:aryangoyat2004@gmail.com" data-i18n="btn_email">Email Me</a>
+            <a class="link" href="https://github.com/aryan740" target="_blank" rel="noopener">GitHub</a>
+            <a class="link" href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <ul class="meta-list">
+            <li><strong>Location:</strong> Karnal / New Delhi NCR</li>
+            <li><strong>Current Focus:</strong> MERN Stack & React.js</li>
+            <li><strong>Availability:</strong> Open for Internships</li>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <div class="card futuristic">
+            <h3>Quick facts</h3>
+            <dl>
+              <dt>Education</dt>
+              <dd>B.Tech — CSE (SRM IST Ghaziabad)</dd>
+              <dt>CGPA</dt>
+              <dd><strong>9.42</strong></dd>
+              <dt>Languages</dt>
+              <dd>English • Hindi • German (A1)</dd>
+              <dt>Core Tech</dt>
+              <dd>HTML • CSS • JS (ES6) • React (learning)</dd>
+            </dl>
+            <div class="small">Tip: Constantly shipping code and learning new technologies.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 data-i18n="nav_skills">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Frontend Development</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3 (Flexbox, Grid)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Responsive Web Design</li>
+              <li>React.js (Learning)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Programming & Concepts</h3>
+            <ul>
+              <li>C++ (Basic)</li>
+              <li>Python (Basic scripting)</li>
+              <li>Data Structures & Algorithms (Beginner)</li>
+              <li>OOP</li>
+              <li>Problem Solving</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Canva</li>
+              <li>Linux basics</li>
+              <li>Deployment: GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="projects-header">
+          <h2 data-i18n="nav_projects">Projects</h2>
+          <div class="project-filters" role="toolbar" aria-label="Project filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="games">Games</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          
+          <article class="project-card tag-react" data-tags="react">
+            <div class="pc-head">
+              <h3>React Web App <span class="tag in-progress">In progress</span></h3>
+            </div>
+            <p>Building a React-based application focused on component architecture, hooks, routing, and API integration. Emphasis on performance and responsive design.</p>
+            <p class="tech"><strong>Tech:</strong> React, Hooks, React Router, Fetch API</p>
+            <div class="card-actions">
+              <a class="btn btn-sm disabled" aria-disabled="true">Live (coming)</a>
+            </div>
+          </article>
+
+          <article class="project-card tag-frontend" data-tags="frontend">
+            <div class="pc-head">
+              <h3>Lumina Xchange</h3>
+            </div>
+            <p>A dynamic currency converter providing real-time exchange rates. Features a clean, futuristic UI with seamless country flag integration and accurate financial conversions.</p>
+            <p class="tech"><strong>Tech:</strong> HTML, CSS, JavaScript, Exchange Rate API</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="https://aryan740.github.io/Currency-Convertor/" target="_blank" rel="noopener">View Live</a>
+              <a class="btn btn-sm" href="https://github.com/aryan740/Currency-Convertor" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card tag-frontend" data-tags="frontend">
+            <div class="pc-head">
+              <h3>Tesla Homepage Clone</h3>
+            </div>
+            <p>Built a responsive landing page using HTML, CSS and JavaScript. Implemented smooth transitions and mobile-first layout.</p>
+            <p class="tech"><strong>Tech:</strong> HTML, CSS, JavaScript, GitHub Pages</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="https://aryan740.github.io/Tesla-Clone/" target="_blank" rel="noopener">View Live</a>
+              <a class="btn btn-sm" href="https://github.com/aryan740" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card tag-games" data-tags="games">
+            <div class="pc-head">
+              <h3>Tic-Tac-Toe</h3>
+            </div>
+            <p>Turn-based game built with vanilla JS and clean DOM updates. Focused on modular code and simple UX.</p>
+            <p class="tech"><strong>Tech:</strong> JavaScript, DOM, HTML, CSS</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="https://aryan740.github.io/Tic-Tac-Toe/" target="_blank" rel="noopener">Play Live</a>
+              <a class="btn btn-sm" href="https://github.com/aryan740" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card tag-games" data-tags="games">
+            <div class="pc-head">
+              <h3>Rock-Paper-Scissors</h3>
+            </div>
+            <p>Interactive game showcasing randomized opponent choices and clean event handling. Simple UX with mobile-friendly buttons.</p>
+            <p class="tech"><strong>Tech:</strong> JavaScript, HTML, CSS</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="https://aryan740.github.io/Rock-Paper-Scissors/" target="_blank" rel="noopener">Play Live</a>
+              <a class="btn btn-sm" href="https://github.com/aryan740" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2 data-i18n="nav_edu">Education</h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <h3>B.Tech — Computer Science & Engineering</h3>
+            <p>SRM Institute of Science and Technology, Ghaziabad (08/2023 – Present)</p>
+            <p><strong>CGPA:</strong> 9.42</p>
+          </div>
+          <div class="edu-card">
+            <h3>CBSE — Class XII (MPC)</h3>
+            <p>Sant Gyaneshwar Model School (04/2022 – 03/2023)</p>
+            <p><strong>Percentage:</strong> 71.2%</p>
+          </div>
+          <div class="edu-card">
+            <h3>CBSE — Class X</h3>
+            <p>Gita Niketan Awasiya Vidyalaya (04/2020 – 03/2021)</p>
+            <p><strong>Percentage:</strong> 91.2%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Languages</h2>
+          <ul class="simple-list">
+            <li>English — Professional Working Proficiency</li>
+            <li>Hindi — Native</li>
+            <li>German — Elementary (A1)</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Interests</h2>
+          <ul class="simple-list">
+            <li>Frontend development & UI/UX</li>
+            <li>Public learning & content creation</li>
+            <li>Personal finance & startups</li>
+            <li>Fitness</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 data-i18n="nav_contact">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 data-i18n="contact_header">Get in touch</h3>
+            <p>Email: <a href="mailto:aryangoyat2004@gmail.com">aryangoyat2004@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917404527004">+91 74045 27004</a></p>
+            <p>Location: Karnal / New Delhi NCR</p>
+            <div class="socials">
+              <a href="https://github.com/aryan740" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <input type="hidden" name="access_key" value="b801b500-229d-471b-914e-7d886ee5a1a1">
+
+            <input type="hidden" name="subject" value="New Submission from Aryan's Portfolio">
+
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" id="name" required placeholder="John Doe">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" id="email" required placeholder="john@example.com">
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" id="message" rows="5" required placeholder="Hi Aryan, I'd like to hire you..."></textarea>
+            </label>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn" id="submitBtn">Send Message</button>
+            </div>
+            <p id="formStatus" class="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> Aryan — Aspiring MERN Developer</div>
+      <div class="footer-links">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

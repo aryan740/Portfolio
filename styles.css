@@ -1,0 +1,226 @@
+:root {
+  /* --- THEME: Deep Coder 2.0 --- */
+  --bg: #0d1117; 
+  --surface: #161b22; 
+  --surface-hover: #21262d; 
+  --border: #30363d;
+  
+  /* Primary Color: Sky Blue */
+  --primary: #38bdf8;         
+  --primary-dim: rgba(56, 189, 248, 0.1); 
+  --primary-hover: #7dd3fc;
+  
+  /* Text */
+  --text-main: #e2e8f0;       
+  --text-muted: #94a3b8;      
+  
+  /* Accents */
+  --accent-green: #2ea043;    /* GitHub Green for "In Progress" tags */
+
+  --font-main: "Inter", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+  
+  --radius: 6px;
+  --container: 1000px;
+}
+
+/* --- GLOBAL RESET --- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* --- UTILS --- */
+.scanline { display: none; } /* Kept hidden as per your html */
+.container { width: 90%; max-width: var(--container); margin: 0 auto; }
+.section { padding: 4rem 0; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+@media(max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 { color: var(--text-main); line-height: 1.2; margin-top: 0; }
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 2rem; }
+ul.simple-list { list-style: circle; padding-left: 1.2rem; color: var(--text-muted); }
+ul.simple-list li { margin-bottom: 0.5rem; }
+
+/* --- HEADER --- */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+.brand { text-decoration: none; display: flex; align-items: center; gap: 0.8rem; }
+.brand-neo { font-family: var(--font-mono); font-weight: 700; color: var(--text-main); font-size: 1.1rem; }
+.brand small { color: var(--text-muted); font-size: 0.85rem; }
+
+.nav { display: flex; gap: 1.5rem; }
+.nav a {
+  color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s;
+}
+.nav a:hover { color: var(--primary); }
+
+.header-actions { display: flex; gap: 0.5rem; }
+.btn-ghost { background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem; }
+.mobile-only { display: none; }
+@media(max-width: 768px) { .nav { display: none; } .mobile-only { display: block; } }
+
+/* --- BUTTONS (Fixed) --- */
+/* This specific selector forces buttons to ignore generic link colors */
+a.btn, button.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #0d1117; /* Dark text on blue button */
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+a.btn:hover, button.btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+
+/* Outline Button (The Email Button) */
+a.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--primary); /* Blue text */
+}
+a.btn-outline:hover {
+  border-color: var(--primary);
+  background: var(--surface-hover);
+  color: var(--primary-hover);
+}
+
+/* Disabled Button */
+.disabled { opacity: 0.6; cursor: not-allowed; background: var(--border) !important; color: var(--text-muted) !important; }
+
+/* Small Button */
+.btn-sm { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+
+/* --- HERO --- */
+.hero { padding: 5rem 0; }
+.hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; }
+.hero h1 .accent { color: var(--primary); }
+.lead { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; }
+.cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem; }
+
+/* Generic Text Links (GitHub/LinkedIn in Hero) */
+.cta-row .link { color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; }
+.cta-row .link:hover { color: var(--primary); border-color: var(--primary); }
+
+/* Quick Facts Card */
+.hero-card .card { 
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; 
+}
+.hero-card dl { display: grid; grid-template-columns: 1fr 2fr; gap: 0.5rem; font-size: 0.9rem; }
+.hero-card dt { color: var(--text-muted); }
+.hero-card dd { margin: 0; color: var(--text-main); margin-bottom: 0.5rem; }
+
+/* --- SKILLS & EDUCATION --- */
+.skills-grid, .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+
+.skill-card, .edu-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem;
+}
+.skill-card h3, .edu-card h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 1rem; }
+.skill-card ul { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; }
+.edu-card p { margin: 0.2rem 0; color: var(--text-muted); font-size: 0.9rem; }
+
+/* --- PROJECTS (Layout Fixed) --- */
+.projects-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+.project-filters .filter-btn {
+  background: transparent; border: 1px solid var(--border); color: var(--text-muted);
+  padding: 0.3rem 0.8rem; margin-right: 0.5rem; border-radius: 20px; cursor: pointer; transition: 0.2s;
+}
+.project-filters .filter-btn:hover, .project-filters .filter-btn.active {
+  background: var(--surface-hover); color: var(--primary); border-color: var(--primary);
+}
+
+.projects-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 1.5rem; 
+}
+
+.project-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem;
+  display: flex; flex-direction: column; /* Pushes buttons to bottom */
+  transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-3px); border-color: var(--text-muted); }
+
+.pc-head h3 { font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.tag.in-progress { font-size: 0.7rem; color: var(--accent-green); border: 1px solid var(--accent-green); padding: 2px 6px; border-radius: 4px; }
+
+.project-card p { font-size: 0.95rem; color: var(--text-muted); flex-grow: 1; }
+.project-card .tech { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+.card-actions { display: flex; gap: 0.8rem; margin-top: auto; } /* Fixes alignment */
+
+/* --- CONTACT SECTION (Fixed Bad Blue & Layout) --- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
+@media(max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem;
+}
+
+/* FIX FOR BAD BLUE LINKS */
+/* We target links inside contact-card specifically */
+.contact-card p a {
+  color: var(--text-muted) !important; /* Force Grey */
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: all 0.2s;
+}
+.contact-card p a:hover {
+  color: var(--primary) !important; /* Blue only on Hover */
+  border-bottom: 1px solid var(--primary);
+}
+
+.socials { margin-top: 1.5rem; display: flex; gap: 1rem; }
+.socials a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+.socials a:hover { color: var(--primary); }
+
+/* Form Styles */
+.contact-form label { display: block; margin-bottom: 1rem; }
+.contact-form span { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  font-family: inherit;
+  transition: 0.2s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary-dim);
+}
+.form-actions { margin-top: 1rem; }
+
+/* --- FOOTER --- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.site-footer .container { display: flex; justify-content: space-between; }
+.footer-links a { color: var(--text-muted); text-decoration: none; margin-left: 1rem; }
+.footer-links a:hover { color: var(--primary); }
